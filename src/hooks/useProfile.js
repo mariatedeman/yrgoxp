@@ -29,16 +29,18 @@ export const useProfile = () => {
                 return;
             }
 
-            const { data, error } = await supabase
+            const { error } = await supabase
                 .from("users")
                 .select("name")
                 .eq("name", saved.name)
                 .single();
 
-            if (error || !data) {
+            if (error && error.code === 'PGRST116') {
+                // Profile confirmed not found in database - clear localStorage
                 localStorage.removeItem("userProfile");
                 setProfile(null);
             } else {
+                // No error or transient error (network, auth, etc.) - keep saved profile
                 setProfile(saved);
             }
 
