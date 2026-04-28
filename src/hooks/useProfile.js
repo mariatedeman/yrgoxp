@@ -63,7 +63,7 @@ export const useProfile = () => {
 
                     if (!saved) return;
 
-                    // matchar mot name (eftersom ni använder name som id)
+                    // Match against `name` because `name` is used as the identifier.
                     if (payload.old.name === saved.name) {
                         localStorage.removeItem("userProfile");
                         setProfile(null);
