@@ -33,12 +33,16 @@ export const useProfile = () => {
                 .from("users")
                 .select("name")
                 .eq("name", saved.name)
-                .single();
+                .maybeSingle();
 
-            if (error && error.code === 'PGRST116') {
-                // Profile confirmed not found in database - clear localStorage
+            if (data === null && !error) {
+                // User not found in database - clear localStorage
                 localStorage.removeItem("userProfile");
                 setProfile(null);
+            } else if (error) {
+                // Network/auth error - keep saved profile to avoid accidental logout
+                console.error('Profile validation error:', error);
+                setProfile(saved);
             } else {
                 // No error or transient error (network, auth, etc.) - keep saved profile
                 setProfile(saved);
@@ -65,7 +69,7 @@ export const useProfile = () => {
 
                     if (!saved) return;
 
-                    // Match against `name` because `name` is used as the identifier.
+                    // Match against `name` because `name` is used as the identifier
                     if (payload.old.name === saved.name) {
                         localStorage.removeItem("userProfile");
                         setProfile(null);
