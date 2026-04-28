@@ -29,7 +29,7 @@ export const useProfile = () => {
                 return;
             }
 
-            const { error } = await supabase
+            const { data, error } = await supabase
                 .from("users")
                 .select("name")
                 .eq("name", saved.name)
