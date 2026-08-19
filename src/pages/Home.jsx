@@ -71,14 +71,23 @@ export default function Home({ showIntro, setShowIntro }) {
 
     if (showIntro) {
         return (
-            <VideoWrapper>
+            <VideoWrapper 
+                onClick={() => {
+                    setShowIntro(false);
+                    sessionStorage.setItem("introPlayed", "true");
+                }}
+                style={{ cursor: "pointer" }}
+            >
                 <IntroVideo
                     autoPlay
                     muted
                     playsInline
-                    onEnded={() => setShowIntro(false)}
+                    onEnded={() => {
+                        setShowIntro(false);
+                        sessionStorage.setItem("introPlayed", "true");
+                    }}
                 >
-                    <source src="intro.mp4" type="video/mp4" />
+                    <source src="/intro.mp4" type="video/mp4" />
                 </IntroVideo>
             </VideoWrapper>
         )
