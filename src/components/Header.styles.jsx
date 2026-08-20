@@ -16,6 +16,15 @@ export const StyledHeader = styled.header`
 export const HamburgerMenu = styled.button`
     background: none;
     border: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+
+    &:focus,
+    &:active,
+    &:focus-visible {
+        outline: none;
+        box-shadow: none;
+    }
 `;
 
 // ============================================================
@@ -120,6 +129,15 @@ export const ToggleButton = styled.button`
   z-index: 2;
   font-weight: bold;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+  }
 `;
 
 export const Slider = styled.div`
@@ -138,6 +156,8 @@ export const Slider = styled.div`
   background-repeat: no-repeat;
   transition: left 0.3s ease;
   z-index: 1;
+  pointer-events: none;
+  -webkit-tap-highlight-color: transparent;
 
   @media (max-width: 390px) {
   top: 0.19rem;
