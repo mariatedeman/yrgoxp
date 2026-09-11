@@ -28,7 +28,7 @@
       "title": "Välkommen till YRGO:XP",
       "description1": "Spelet som gör det enkelt att börja prata. Samla XP genom att ställa frågor och vara aktiv i spelet.",
       "description2": "Ju fler frågor du ställer, desto högre klättrar du på scoreboarden.",
-      "registeredPlayers": "Registrerade spelare",
+      "registeredPlayers": "Spelare inne",
       "seeRules": "Se spelregler",
       "errorFetching": "Kunde inte hämta spelare. Försök igen.",
       "toQuestions": "Gå till frågor"
@@ -37,7 +37,7 @@
       "title": "Welcome to YRGO:XP",
       "description1": "The game that makes it easy to start talking. Collect XP by asking questions and being active in the game.",
       "description2": "The more questions you ask, the higher you climb on the scoreboard.",
-      "registeredPlayers": "Registered players",
+      "registeredPlayers": "Active players",
       "seeRules": "See rules",
       "errorFetching": "Could not fetch players. Try again.",
       "toQuestions": "Go to questions"
@@ -65,7 +65,7 @@
         "id": 3,
         "icon": "megaphone",
         "title": "Ställ frågan",
-        "description": "Gå fram till en person och ställ frågan för att starta ett samtal. Tryck sedan \"Klar\"."
+        "description": "Gå fram till en person och ställ frågan för att starta ett samtal. Tryck \"Klar\" sen."
       },
       {
         "id": 4,
@@ -119,11 +119,9 @@
       "description": "Skriv in ditt namn och välj avatar för att komma igång.",
       "name": "Namn",
       "namePlaceholder": "Ange ditt namn",
-      "chooseClass": "Välj roll",
       "chooseAvatar": "Välj din avatar",
       "submit": "Skapa profil",
       "nameExists": "Det finns redan en spelare med det här namnet. Välj ett annat.",
-      "errorRole": "Du måste välja en roll.",
       "errorAvatar": "Du måste välja en avatar.",
       "errorNameLength": "Ditt namn måste vara minst två tecken långt.",
       "errorChars": "Namnet får endast innehålla bokstäver, siffror och bindestreck."
@@ -133,11 +131,9 @@
       "description": "Type your name and choose an avatar to get started.",
       "name": "Name",
       "namePlaceholder": "Enter your name",
-      "chooseClass": "Choose role",
       "chooseAvatar": "Choose your avatar",
       "submit": "Create profile",
       "nameExists": "A player with this name already exists. Choose another.",
-      "errorRole": "Please select a role.",
       "errorAvatar": "Please select an avatar.",
       "errorNameLength": "Name must be at least two characters long.",
       "errorChars": "Your name can only contain letters, numbers, and hyphens."
@@ -215,12 +211,8 @@
       "loading": "Laddar...",
       "save": "Spara",
       "saving": "Sparar...",
-      "webDeveloper": "Webbutvecklare",
-      "webDevelopers": "Webbutvecklare",
-      "digitalDesigner": "Digital designer",
-      "digitalDesigners": "Digital designers",
-      "company": "Företag",
-      "companies": "Företag",
+      "player": "Spelare",
+      "players": "Spelare",
       "newQuestion": "Ny fråga",
       "createProfile": "Skapa profil"
     },
@@ -231,12 +223,8 @@
       "loading": "Loading...",
       "save": "Save",
       "saving": "Saving...",
-      "webDeveloper": "Web developer",
-      "webDevelopers": "Web developers",
-      "digitalDesigner": "Digital designer",
-      "digitalDesigners": "Digital designers",
-      "company": "Company",
-      "companies": "Companies",
+      "player": "Player",
+      "players": "Players",
       "newQuestion": "New question",
       "createProfile": "Create profile"
     }

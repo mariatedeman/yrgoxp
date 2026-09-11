@@ -54,10 +54,7 @@ export default function Home({ showIntro, setShowIntro }) {
         setErrorMessage("");
     }, [lang]);
 
-
-    const digitalDesignersActive = users.filter(user => user.role === 'DD').length;
-    const webDevelopersActive = users.filter(user => user.role === 'WU').length;
-    const companiesActive = users.filter(user => user.role === 'CO').length;
+    const playersActive = users.length;
 
     useEffect(() => {
         if (sessionStorage.getItem("introPlayed")) return;
@@ -98,19 +95,9 @@ export default function Home({ showIntro, setShowIntro }) {
                 <h2>{text.registeredPlayers.toUpperCase()}</h2>
 
                 <div>
-                    <p>{textCommon.digitalDesigners.toUpperCase()}:</p>
-                    <p>{loading ? textCommon.loading : digitalDesignersActive}</p>
+                    <p>{loading ? textCommon.loading : playersActive}</p>
                 </div>
 
-                <div>
-                    <p>{textCommon.webDevelopers.toUpperCase()}:</p>
-                    <p>{loading ? textCommon.loading : webDevelopersActive}</p>
-                </div>
-
-                <div>
-                    <p>{textCommon.companies.toUpperCase()}:</p>
-                    <p>{loading ? textCommon.loading : companiesActive}</p>
-                </div>
             </RegisteredPlayersCard>
 
             <GhostContainer grow>

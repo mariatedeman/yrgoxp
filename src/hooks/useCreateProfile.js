@@ -19,7 +19,6 @@ export default function useCreateProfile() {
 
     // Form data - If profile exists the data is shown from start
     const [name, setName] = useState(profile?.name || "");
-    const [role, setRole] = useState(profile?.role || "");
     const [avatar, setAvatar] = useState(profile?.avatar || "")
     const [loading, setLoading] = useState(false);
 
@@ -31,10 +30,7 @@ export default function useCreateProfile() {
 
         try {
 
-            // Check that role and avatar are selected
-            if (!role) {
-                throw new Error(text.errorRole)
-            }
+            // Check that avatar are selected
             if (!avatar) {
                 throw new Error(text.errorAvatar)
             }
@@ -56,7 +52,6 @@ export default function useCreateProfile() {
             // Create profile with trimmed, validated name
             const profileData = {
                 name: trimmedName,
-                role,
                 avatar
             };
 
@@ -104,8 +99,6 @@ export default function useCreateProfile() {
     return {
         name,
         setName,
-        role,
-        setRole,
         avatar,
         setAvatar,
         loading,

@@ -77,18 +77,21 @@ export const RegisteredPlayersCard = styled(BaseCard)`
     div {
         display: flex;
         justify-content: space-between;
+        justify-content: center;
         padding: 0rem 2rem;
     }
 
     h2 {
         margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
     }
 
     p {
-        margin: 0.5rem;
-        font-size: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
         font-family: var(--font-heading);
-        color: var(--text);
+        color: var(--text-h);
     }   
 `
 
@@ -127,6 +130,7 @@ export const ProfileNameCard = styled(BaseCard)`
     height: 6rem;
     font-size: 1.5rem;
     font-family: var(--font-heading);
+    justify-content: center;
 
     p {
         margin: 0;
