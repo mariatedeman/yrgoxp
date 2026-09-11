@@ -62,49 +62,6 @@ export default function CreateProfile() {
 
             <form onSubmit={handleSubmit}>
 
-                <CreateProfileWrapper>
-                    <h3>{text.chooseClass.toUpperCase()}</h3>
-
-                    <StyledOptionWrapper>
-                        <ButtonRow>
-
-                            <StyledOption>
-                                <input
-                                    type="radio"
-                                    name="program"
-                                    value="WU"
-                                    checked={role === 'WU'}
-                                    onChange={(e) => setRole(e.target.value)}
-                                />
-                                <div>{textCommon.webDeveloper.toUpperCase()}</div>
-                            </StyledOption>
-
-                            <StyledOption>
-                                <input
-                                    type="radio"
-                                    name="program"
-                                    value="DD"
-                                    checked={role === 'DD'}
-                                    onChange={(e) => setRole(e.target.value)}
-                                />
-                                <div>{textCommon.digitalDesigner.toUpperCase()}</div>
-                            </StyledOption>
-
-                        </ButtonRow>
-
-                        <StyledOption>
-                            <input
-                                type="radio"
-                                name="program"
-                                value="CO"
-                                checked={role === 'CO'}
-                                onChange={(e) => setRole(e.target.value)}
-                            />
-                            <div>{textCommon.company.toUpperCase()}</div>
-                        </StyledOption>
-
-                    </StyledOptionWrapper>
-                </CreateProfileWrapper>
 
                 <CreateProfileWrapper>
                     <h3>{text.name.toUpperCase()}</h3>

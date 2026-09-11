@@ -50,12 +50,6 @@ export default function ScoreBoard() {
     const text = translations.score[lang];
     const textCommon = translations.common[lang];
 
-    const roleMap = {
-        DD: textCommon.digitalDesigner,
-        WU: textCommon.webDeveloper,
-        CO: textCommon.company
-    }
-
     const iconMap = {
         turtle: TurtleIcon,
         robot: RobotIcon,
@@ -97,9 +91,6 @@ export default function ScoreBoard() {
                                     <UserInfo thisUser={thisUser}>
                                         <span>
                                             {user.name}
-                                        </span>
-                                        <span>
-                                            {roleMap[user.role].toUpperCase()}
                                         </span>
                                     </UserInfo>
                                 </UserWrapper>

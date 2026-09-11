@@ -36,14 +36,7 @@ export default function FinishedProfile() {
         frog: FrogIcon,
     }
 
-    const roleMap = {
-        DD: textCommon.digitalDesigner,
-        WU: textCommon.webDeveloper,
-        CO: textCommon.company
-    }
-
     const ProfileIcon = iconMap[profile.avatar];
-    const ProfileRole = roleMap[profile.role]
 
     return (
         <>
@@ -56,7 +49,6 @@ export default function FinishedProfile() {
             </BigIconCard>
             <ProfileNameCard>
                 <p>{profile.name.toUpperCase()}</p>
-                <p>{ProfileRole.toUpperCase()}</p>
             </ProfileNameCard>
             <WideButton onClick={() => navigate("/choose-difficulty")}>
                 {text.button.toUpperCase()}
