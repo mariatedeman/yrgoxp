@@ -5,7 +5,6 @@ A gamified quiz application built with React and Vite where webdeveloper and dig
 ## 🎮 Features
 
 - **User Profiles**: Create profiles with custom avatars (8 different options)
-- **Role-Based Questions**: Different question sets for students and companies 
 - **Difficulty Levels**: Choose between different difficulty levels with varying point rewards
 - **Real-Time Leaderboard**: Live score updates with Supabase real-time subscriptions
 - **Multi-Language Support**: Swedish and English language options

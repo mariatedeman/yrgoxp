@@ -33,16 +33,11 @@ export function useQuestions(level) {
         }
     }, [storedUser, text.errorNoUser]);
 
-    const role = storedUser?.role;
-
 
     useEffect(() => {
-        if (!storedUser || !role) return;
+        if (!storedUser) return;
 
         setLoading(true);
-
-        // Get correct questions based on company or student
-        const tableName = role === "CO" ? "questions_companies" : "questions";
 
         const fetchData = async () => {
             try {
@@ -58,7 +53,7 @@ export function useQuestions(level) {
 
                 // Then: Get questions for that level_id with join
                 const { data, error } = await supabase
-                    .from(tableName)
+                    .from("questions")
                     .select('*, levels(id, level, points)')
                     .eq('level_id', levelData.id);
 
@@ -72,7 +67,7 @@ export function useQuestions(level) {
         };
 
         fetchData();
-    }, [level, role]);
+    }, [level]);
 
     useEffect(() => {
         if (questions.length > 0) {

@@ -89,7 +89,7 @@ export const RegisteredPlayersCard = styled(BaseCard)`
 
     p {
         margin: 1rem;
-        font-size: 3rem;
+        font-size: 2rem;
         font-family: var(--font-heading);
         color: var(--text-h);
     }   
