@@ -26,8 +26,6 @@ export default function CreateProfile() {
     const {
         name,
         setName,
-        role,
-        setRole,
         avatar,
         setAvatar,
         loading,

@@ -32,9 +32,6 @@ export default function useCreateProfile() {
         try {
 
             // Check that role and avatar are selected
-            if (!role) {
-                throw new Error(text.errorRole)
-            }
             if (!avatar) {
                 throw new Error(text.errorAvatar)
             }
@@ -56,7 +53,6 @@ export default function useCreateProfile() {
             // Create profile with trimmed, validated name
             const profileData = {
                 name: trimmedName,
-                role,
                 avatar
             };
 
@@ -104,8 +100,6 @@ export default function useCreateProfile() {
     return {
         name,
         setName,
-        role,
-        setRole,
         avatar,
         setAvatar,
         loading,
